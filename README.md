@@ -1,9 +1,8 @@
-# Fabric Example Mod
+# SkyFabrication
+![build](https://github.com/SimplyCmd/SkyFabrication/workflows/build/badge.svg)
 
-## Setup
-
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
+SkyFabrication is a Fabric mod aiming to provide a nice modded skyblock experience for the latest versions of Minecraft.
 
 ## License
 
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+This mod is available under the CC0 license. Feel free to browse the code and learn from it :)
