@@ -2,13 +2,26 @@ package io.github.simplycmd.skyfabrication;
 
 import net.fabricmc.api.ModInitializer;
 
-public class Main implements ModInitializer {
-	@Override
-	public void onInitialize() {
-		// This code runs as soon as Minecraft is in a mod-load-ready state.
-		// However, some things (like resources) may still be uninitialized.
-		// Proceed with mild caution.
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
-		System.out.println("Hello Fabric world!");
-	}
+public class Main implements ModInitializer {
+
+    public static Logger LOGGER = LogManager.getLogger();
+
+    public static final String MOD_ID = "skyfabrication";
+    public static final String MOD_NAME = "SkyFabrication";
+
+    @Override
+    public void onInitialize() {
+        log(Level.INFO, "Initializing");
+        Blocks.RegisterBlocks();
+        Items.RegisterItems();
+    }
+
+    public static void log(Level level, String message){
+        LOGGER.log(level, "["+MOD_NAME+"] " + message);
+    }
+
 }
