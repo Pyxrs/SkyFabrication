@@ -19,7 +19,9 @@
     "main": [
       "io.github.simplycmd.skyfabrication.Main"
     ],
-    "client": [],
+    "client": [
+      "io.github.simplycmd.skyfabrication.client.ClientMain"
+    ],
     "server": []
   },
   "mixins": [
