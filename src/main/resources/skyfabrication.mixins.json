@@ -2,7 +2,13 @@
   "required": true,
   "package": "io.github.simplycmd.skyfabrication.mixin",
   "compatibilityLevel": "JAVA_8",
-  "mixins": [],
+  "mixins": [
+    "AbstractBlockMixin",
+    "CactusBlockMixin",
+    "LeavesBlockMixin",
+    "ServerPlayerEntityMixin",
+    "SugarCaneBlockMixin"
+  ],
   "client": [],
   "server": [],
   "injectors": {

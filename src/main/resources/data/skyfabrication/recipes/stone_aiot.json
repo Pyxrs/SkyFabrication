@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "PSA",
+        " O ",
+        " H "
+    ],
+    "key": {
+        "P": {
+            "item": "minecraft:stone_pickaxe"
+        },
+        "S": {
+            "item": "minecraft:stone_sword"
+        },
+        "A": {
+            "item": "minecraft:stone_axe"
+        },
+        "O": {
+            "item": "minecraft:stone_shovel"
+        },
+        "H": {
+            "item": "minecraft:stone_hoe"
+        }
+    },
+    "result": {
+        "item": "skyfabrication:stone_aiot",
+        "count": 1
+    }
+}

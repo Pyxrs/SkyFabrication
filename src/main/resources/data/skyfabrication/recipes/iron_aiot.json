@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "PSA",
+        " O ",
+        " H "
+    ],
+    "key": {
+        "P": {
+            "item": "minecraft:iron_pickaxe"
+        },
+        "S": {
+            "item": "minecraft:iron_sword"
+        },
+        "A": {
+            "item": "minecraft:iron_axe"
+        },
+        "O": {
+            "item": "minecraft:iron_shovel"
+        },
+        "H": {
+            "item": "minecraft:iron_hoe"
+        }
+    },
+    "result": {
+        "item": "skyfabrication:iron_aiot",
+        "count": 1
+    }
+}

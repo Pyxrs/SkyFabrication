@@ -14,6 +14,11 @@ minecraft {
 }
 
 dependencies {
+	// LibZoomer https://github.com/joaoh1/LibZoomer
+	compile fileTree(include: ['*.jar'], dir: 'libs')
+
+	modImplementation group: 'net.devtech', name: 'arrp', version: '0.3.11'
+
 	//to change the versions see the gradle.properties file
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
 	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
@@ -75,5 +80,14 @@ publishing {
 	repositories {
 		// uncomment to publish to the local maven
 		// mavenLocal()
+	}
+}
+
+repositories {
+	maven {
+		url = 'https://jitpack.io'
+	}
+	maven {
+		url = 'https://raw.githubusercontent.com/Devan-Kerman/Devan-Repo/master/'
 	}
 }

@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "skyfabrication:item/iron_aiot"
+        "layer0": "skyfabrication:item/tools/iron_aiot"
     }
 }

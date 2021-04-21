@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "SSS",
+        "SSS",
+        "SSS"
+    ],
+    "key": {
+        "S": {
+            "item": "minecraft:red_sand"
+        }
+    },
+    "result": {
+        "item": "skyfabrication:red_snad",
+        "count": 1
+    }
+}

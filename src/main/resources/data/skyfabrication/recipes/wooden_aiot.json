@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "PSA",
+        " O ",
+        " H "
+    ],
+    "key": {
+        "P": {
+            "item": "minecraft:wooden_pickaxe"
+        },
+        "S": {
+            "item": "minecraft:wooden_sword"
+        },
+        "A": {
+            "item": "minecraft:wooden_axe"
+        },
+        "O": {
+            "item": "minecraft:wooden_shovel"
+        },
+        "H": {
+            "item": "minecraft:wooden_hoe"
+        }
+    },
+    "result": {
+        "item": "skyfabrication:wooden_aiot",
+        "count": 1
+    }
+}

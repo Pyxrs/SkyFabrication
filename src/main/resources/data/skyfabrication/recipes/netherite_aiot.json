@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "PSA",
+        " O ",
+        " H "
+    ],
+    "key": {
+        "P": {
+            "item": "minecraft:netherite_pickaxe"
+        },
+        "S": {
+            "item": "minecraft:netherite_sword"
+        },
+        "A": {
+            "item": "minecraft:netherite_axe"
+        },
+        "O": {
+            "item": "minecraft:netherite_shovel"
+        },
+        "H": {
+            "item": "minecraft:netherite_hoe"
+        }
+    },
+    "result": {
+        "item": "skyfabrication:netherite_aiot",
+        "count": 1
+    }
+}

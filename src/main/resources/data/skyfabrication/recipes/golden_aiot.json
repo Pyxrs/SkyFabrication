@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "PSA",
+        " O ",
+        " H "
+    ],
+    "key": {
+        "P": {
+            "item": "minecraft:golden_pickaxe"
+        },
+        "S": {
+            "item": "minecraft:golden_sword"
+        },
+        "A": {
+            "item": "minecraft:golden_axe"
+        },
+        "O": {
+            "item": "minecraft:golden_shovel"
+        },
+        "H": {
+            "item": "minecraft:golden_hoe"
+        }
+    },
+    "result": {
+        "item": "skyfabrication:golden_aiot",
+        "count": 1
+    }
+}
