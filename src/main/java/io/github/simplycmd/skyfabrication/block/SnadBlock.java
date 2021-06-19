@@ -1,13 +1,10 @@
 package io.github.simplycmd.skyfabrication.block;
 
 import java.util.Random;
-
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.CactusBlock;
-import net.minecraft.block.SandBlock;
-import net.minecraft.block.SugarCaneBlock;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.minecraft.block.*;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.util.math.BlockPos;
 
@@ -16,8 +13,8 @@ public class SnadBlock extends SandBlock {
     public static IntProperty MAX_HEIGHT = IntProperty.of("max_height", 1, 3);
 
     // Create the snad, standard custom class
-    public SnadBlock(int color, Settings settings) {
-        super(color, settings);
+    public SnadBlock(int color) {
+        super(color, FabricBlockSettings.of(Material.AGGREGATE).strength(0.5F).sounds(BlockSoundGroup.SAND));
     }
 
     // Enables random ticks for snad

@@ -1,22 +1,16 @@
 package io.github.simplycmd.skyfabrication.item;
 
+import io.github.simplycmd.skyfabrication.registry.ItemRegistry;
 import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.block.*;
-import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.fluid.FlowableFluid;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.BucketItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsage;
-import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.network.ServerPlayerEntity;
-import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.stat.Stats;
-import net.minecraft.tag.FluidTags;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.hit.BlockHitResult;
@@ -26,9 +20,6 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.world.RaycastContext;
 import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
-import org.jetbrains.annotations.Nullable;
-
-import java.util.function.Consumer;
 
 public class TerracottaBucketItem extends BucketItem {
     private final Fluid fluid;
@@ -59,9 +50,9 @@ public class TerracottaBucketItem extends BucketItem {
                         fluidDrainable.tryDrainFluid(world, blockPos, blockState);
                         ItemStack itemStack2 = null;
                         if (blockState.getBlock() == Blocks.WATER) {
-                            itemStack2 = Items.water_terracotta_bucket.getDefaultStack();
+                            itemStack2 = ItemRegistry.get("water_terracotta_bucket").getDefaultStack();
                         } else if (blockState.getBlock() == Blocks.LAVA) {
-                            itemStack2 = Items.lava_terracotta_bucket.getDefaultStack();
+                            itemStack2 = ItemRegistry.get("lava_terracotta_bucket").getDefaultStack();
                         }
                         if (!itemStack2.isEmpty()) {
                             user.incrementStat(Stats.USED.getOrCreateStat(this));
@@ -90,7 +81,7 @@ public class TerracottaBucketItem extends BucketItem {
                             Criteria.PLACED_BLOCK.trigger((ServerPlayerEntity)user, blockPos3, itemStack);
                         }
                         user.incrementStat(Stats.USED.getOrCreateStat(this));
-                        return TypedActionResult.success(Items.terracotta_bucket.getDefaultStack(), world.isClient());
+                        return TypedActionResult.success(ItemRegistry.get("terracotta_bucket").getDefaultStack(), world.isClient());
                     } else {
                         return TypedActionResult.fail(itemStack);
                     }

@@ -1,15 +1,12 @@
 package io.github.simplycmd.skyfabrication;
 
-import io.github.simplycmd.skyfabrication.block.Blocks;
-import io.github.simplycmd.skyfabrication.item.Items;
+import io.github.simplycmd.skyfabrication.registry.BlockRegistry;
+import io.github.simplycmd.skyfabrication.registry.ItemRegistry;
 import net.devtech.arrp.api.RRPCallback;
 import net.devtech.arrp.api.RuntimeResourcePack;
 import net.fabricmc.api.ModInitializer;
 
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.text.LiteralText;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.Util;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -23,14 +20,16 @@ public class Main implements ModInitializer {
 
     public static final RuntimeResourcePack RESOURCE_PACK = RuntimeResourcePack.create(MOD_ID + ":resource_pack");
 
+    public static Identifier ID(String path) {
+        return new Identifier(MOD_ID, path);
+    }
+
     @Override
     public void onInitialize() {
         RRPCallback.EVENT.register(a -> a.add(RESOURCE_PACK));
         WelcomeQuote();
-        Blocks.RegisterBlocks();
-        Items.RegisterItems();
-        Zoom.Zooom();
-        RESOURCE_PACK.dump();
+        BlockRegistry.register();
+        ItemRegistry.register();
     }
 
     public static void WelcomeQuote() {
