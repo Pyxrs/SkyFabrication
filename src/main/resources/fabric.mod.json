@@ -2,18 +2,20 @@
   "schemaVersion": 1,
   "id": "skyfabrication",
   "version": "${version}",
+
   "name": "SkyFabrication",
   "description": "SkyFabrication is a Fabric mod aiming to provide a nice modded skyblock experience for the latest versions of Minecraft.",
   "authors": [
     "SimplyCmd"
   ],
-  "contributors": [],
   "contact": {
-    "homepage": "https://simplycmd.github.io/skyfabrication",
-    "sources": "https://github.com/SimplyCmd/SkyFabrication"
+    "homepage": "https://simplycmd.github.io/SkyFabrication/",
+    "sources": "https://github.com/SimplyCmd/SkyFabrication/"
   },
-  "license": "MIT",
+
+  "license": "CC0-1.0",
   "icon": "assets/skyfabrication/icon.png",
+
   "environment": "*",
   "entrypoints": {
     "main": [
@@ -21,15 +23,19 @@
     ],
     "client": [
       "io.github.simplycmd.skyfabrication.client.ClientMain"
-    ],
-    "server": []
+    ]
   },
   "mixins": [
     "skyfabrication.mixins.json"
   ],
+
   "depends": {
-    "fabricloader": ">=0.7.4",
+    "fabricloader": ">=0.11.3",
     "fabric": "*",
-    "minecraft": "1.17.x"
+    "minecraft": "1.17.x",
+    "java": ">=16"
+  },
+  "suggests": {
+    "another-mod": "*"
   }
 }

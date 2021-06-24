@@ -16,6 +16,7 @@ import net.minecraft.item.MiningToolItem;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.tag.Tag;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -27,7 +28,7 @@ public class BaseAIOT extends MiningToolItem {
     protected static final Map<Block, BlockState> TILLED_BLOCKS;
 
     public BaseAIOT(float damage, float speed, ToolMaterial material, Settings settings) {
-        super(damage, speed, material, new HashSet<>(), settings);
+        super(damage, speed, material, Tag.of(new HashSet<>()), settings);
     }
 
     @Override

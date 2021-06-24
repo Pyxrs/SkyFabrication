@@ -81,8 +81,8 @@ public class WateringCanItem extends Item {
     }
 
     protected static BlockHitResult raycast(World world, PlayerEntity player, RaycastContext.FluidHandling fluidHandling) {
-        float f = player.pitch;
-        float g = player.yaw;
+        float f = player.getPitch();
+        float g = player.getYaw();
         Vec3d vec3d = player.getEyePos();
         float h = MathHelper.cos(-g * 0.017453292F - 3.1415927F);
         float i = MathHelper.sin(-g * 0.017453292F - 3.1415927F);

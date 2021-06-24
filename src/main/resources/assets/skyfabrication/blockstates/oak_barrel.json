@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "level=0": {
+      "model": "skyfabrication:block/oak_barrel"
+    },
+    "level=1": {
+      "model": "skyfabrication:block/oak_barrel"
+    },
+    "level=2": {
+      "model": "skyfabrication:block/oak_barrel"
+    },
+    "level=3": {
+      "model": "skyfabrication:block/oak_barrel"
+    }
+  }
+}

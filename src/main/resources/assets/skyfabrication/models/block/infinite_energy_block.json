@@ -34,9 +34,9 @@
 		}
 	},
 	"textures": {
-		"0": "skyfabrication:block/infinity_reactor_iron",
-		"1": "skyfabrication:block/infinity_reactor_copper",
-		"particle": "skyfabrication:block/infinity_reactor_copper"
+		"0": "skyfabrication:block/infinite_energy_iron",
+		"1": "skyfabrication:block/infinite_energy_copper",
+		"particle": "skyfabrication:block/infinite_energy_copper"
 	},
 	"elements": [
 		{

@@ -1,7 +1,8 @@
 {
   "required": true,
+  "minVersion": "0.8",
   "package": "io.github.simplycmd.skyfabrication.mixin",
-  "compatibilityLevel": "JAVA_8",
+  "compatibilityLevel": "JAVA_16",
   "mixins": [
     "AbstractBlockMixin",
     "CactusBlockMixin",
@@ -9,8 +10,10 @@
     "ServerPlayerEntityMixin",
     "SugarCaneBlockMixin"
   ],
-  "client": [],
-  "server": [],
+  "client": [
+    "GameRendererMixin",
+    "MouseMixin"
+  ],
   "injectors": {
     "defaultRequire": 1
   }

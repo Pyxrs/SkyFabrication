@@ -2,6 +2,7 @@ package io.github.simplycmd.skyfabrication.block;
 
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
@@ -29,11 +30,11 @@ public class CongealedSlimeBlock extends Block {
     }
 
     @Override
-    public void onLandedUpon(World world, BlockPos pos, Entity entity, float distance) {
+    public void onLandedUpon(World world, BlockState state, BlockPos pos, Entity entity, float fallDistance) {
         if (entity.bypassesLandingEffects()) {
-            super.onLandedUpon(world, pos, entity, distance);
+            super.onLandedUpon(world, state, pos, entity, fallDistance);
         } else {
-            entity.handleFallDamage(distance, 0.0F, DamageSource.FALL);
+            entity.handleFallDamage(fallDistance, 0.0F, DamageSource.FALL);
         }
 
     }
@@ -41,7 +42,7 @@ public class CongealedSlimeBlock extends Block {
     @Override
     public void onEntityLand(BlockView world, Entity entity) {
         if (entity instanceof ServerPlayerEntity) {
-            ((ServerPlayerEntity) entity).applyStatusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 10, 2, false, false));
+            ((ServerPlayerEntity) entity).addStatusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 10, 2, false, false));
         }
         if (entity.bypassesLandingEffects()) {
             super.onEntityLand(world, entity);
@@ -58,13 +59,13 @@ public class CongealedSlimeBlock extends Block {
     }
 
     @Override
-    public void onSteppedOn(World world, BlockPos pos, Entity entity) {
+    public void onSteppedOn(World world, BlockPos pos, BlockState state, Entity entity) {
         double d = Math.abs(entity.getVelocity().y);
         if (d < 0.1D && !entity.bypassesSteppingEffects()) {
             double e = 0.4D + d * 0.2D;
             entity.setVelocity(entity.getVelocity().multiply(e, 1.0D, e));
         }
 
-        super.onSteppedOn(world, pos, entity);
+        super.onSteppedOn(world, pos, state, entity);
     }
 }

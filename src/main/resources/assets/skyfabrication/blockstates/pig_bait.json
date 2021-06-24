@@ -1,0 +1,21 @@
+{
+    "variants": {
+        "": [
+            {
+                "model": "skyfabrication:block/bait/carrot_bait"
+            },
+            {
+                "model": "skyfabrication:block/bait/carrot_bait",
+                "y": 90
+            },
+            {
+                "model": "skyfabrication:block/bait/carrot_bait",
+                "y": 180
+            },
+            {
+                "model": "skyfabrication:block/bait/carrot_bait",
+                "y": 270
+            }
+        ]
+    }
+}
