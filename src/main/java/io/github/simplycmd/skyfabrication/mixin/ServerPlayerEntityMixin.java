@@ -31,7 +31,7 @@ public abstract class ServerPlayerEntityMixin {
             int current_pos = 0;
             if (get_sapling_pos.size() > 0) {
                 while (current_pos < get_sapling_pos.size()) {
-                    particles(world, get_sapling_pos.get(current_pos), get_sapling_pos, current_pos);
+                    particles(world, get_sapling_pos.get(current_pos));
                     growFertilizable(world, get_sapling_pos.get(current_pos));
                     if (Math.random() > 0.5) {
                         growFertilizable(world, get_sapling_pos.get(current_pos));
@@ -44,9 +44,7 @@ public abstract class ServerPlayerEntityMixin {
         }
     }
 
-    private void particles(World world, BlockPos pos, ArrayList<BlockPos> get_sapling_pos,
-            int current_pos) {
-
+    private void particles(World world, BlockPos pos) {
         Random RANDOM = new Random();
         double d = 0.5D;
         double g = 1.0D;
@@ -66,7 +64,7 @@ public abstract class ServerPlayerEntityMixin {
     }
 
     private ArrayList<BlockPos> getSaplingPos() {
-        ArrayList<BlockPos> saplings = new ArrayList<BlockPos>();
+        ArrayList<BlockPos> saplings = new ArrayList<>();
         BlockPos pos = ((ServerPlayerEntity) (Object) this).getBlockPos();
         World world = ((ServerPlayerEntity) (Object) this).world;
 
@@ -89,7 +87,7 @@ public abstract class ServerPlayerEntityMixin {
         return saplings;
     }
 
-    private static boolean growFertilizable(World world, BlockPos pos) {
+    private static void growFertilizable(World world, BlockPos pos) {
         BlockState blockState = world.getBlockState(pos);
         if (blockState.getBlock() instanceof Fertilizable) {
             Fertilizable fertilizable = (Fertilizable) blockState.getBlock();
@@ -100,11 +98,9 @@ public abstract class ServerPlayerEntityMixin {
                     }
                 }
 
-                return true;
             }
         }
 
-        return false;
     }
 
 }

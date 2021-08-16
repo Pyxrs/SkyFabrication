@@ -1,6 +1,5 @@
 package io.github.simplycmd.skyfabrication.item;
 
-import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -20,7 +19,6 @@ import net.minecraft.world.RaycastContext;
 import net.minecraft.world.World;
 
 import static net.minecraft.item.BoneMealItem.useOnFertilizable;
-import static net.minecraft.item.BoneMealItem.useOnGround;
 
 public class WateringCanItem extends Item {
     int radius;

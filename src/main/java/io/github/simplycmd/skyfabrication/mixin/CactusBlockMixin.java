@@ -39,7 +39,5 @@ public class CactusBlockMixin {
             }
             ci.cancel();
         }
-
     }
-
 }

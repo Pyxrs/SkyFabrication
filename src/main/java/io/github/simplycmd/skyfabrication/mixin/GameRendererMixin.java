@@ -16,7 +16,7 @@ public class GameRendererMixin {
     @Inject(method = "getFov", at = @At("HEAD"), cancellable = true)
     public void getZoomLevel(CallbackInfoReturnable<Double> cir) {
         if (ClientMain.zoomKey.isPressed()) {
-            cir.setReturnValue(ClientMain.ZOOM_LEVEL);
+            cir.setReturnValue(19.0);
             MinecraftClient.getInstance().options.smoothCameraEnabled = true;
         } else {
             MinecraftClient.getInstance().options.smoothCameraEnabled = false;

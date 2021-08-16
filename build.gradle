@@ -14,6 +14,18 @@ repositories {
 	maven {
 		url = uri("https://storage.googleapis.com/devan-maven/")
 	}
+	maven {
+		name = "Technici4n"
+		url = "https://raw.githubusercontent.com/Technici4n/Technici4n-maven/master/"
+		content {
+			includeGroup "net.fabricmc.fabric-api"
+			includeGroup "dev.technici4n"
+		}
+	}
+	maven {
+		name = "BuildCraft"
+		url = "https://mod-buildcraft.com/maven"
+	}
 }
 
 dependencies {
@@ -22,7 +34,12 @@ dependencies {
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-	modImplementation("net.devtech:arrp:${project.arrp_version}")
+	modImplementation include("net.devtech:arrp:${project.arrp_version}")
+
+	modApi include("dev.technici4n:FastTransferLib:${project.energy_version}")
+
+	compileOnly("org.projectlombok:lombok:${project.lombok_version}")
+	annotationProcessor("org.projectlombok:lombok:${project.lombok_version}")
 }
 
 processResources {

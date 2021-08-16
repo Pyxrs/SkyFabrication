@@ -6,13 +6,11 @@
   "mixins": [
     "AbstractBlockMixin",
     "CactusBlockMixin",
-    "LeavesBlockMixin",
     "ServerPlayerEntityMixin",
     "SugarCaneBlockMixin"
   ],
   "client": [
-    "GameRendererMixin",
-    "MouseMixin"
+    "GameRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1

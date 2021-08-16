@@ -1,6 +1,0 @@
-{
-    "parent": "block/cube_all",
-    "textures": {
-      "all": "skyfabrication:block/congealed_green_slime_block"
-    }
-  }

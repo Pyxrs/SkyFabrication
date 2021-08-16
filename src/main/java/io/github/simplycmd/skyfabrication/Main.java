@@ -1,15 +1,17 @@
 package io.github.simplycmd.skyfabrication;
 
+import io.github.simplycmd.skyfabrication.registry.BlockEntityRegistry;
 import io.github.simplycmd.skyfabrication.registry.BlockRegistry;
 import io.github.simplycmd.skyfabrication.registry.ItemRegistry;
 import net.devtech.arrp.api.RRPCallback;
 import net.devtech.arrp.api.RuntimeResourcePack;
 import net.fabricmc.api.ModInitializer;
-
 import net.minecraft.util.Identifier;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import java.awt.*;
 
 public class Main implements ModInitializer {
 
@@ -26,10 +28,12 @@ public class Main implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        RRPCallback.EVENT.register(a -> a.add(RESOURCE_PACK));
         WelcomeQuote();
         BlockRegistry.register();
+        BlockEntityRegistry.register();
         ItemRegistry.register();
+        RRPCallback.EVENT.register(a -> a.add(RESOURCE_PACK));
+        //RESOURCE_PACK.dump();
     }
 
     public static void WelcomeQuote() {

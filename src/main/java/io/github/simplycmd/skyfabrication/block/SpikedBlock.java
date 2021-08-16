@@ -1,6 +1,5 @@
 package io.github.simplycmd.skyfabrication.block;
 
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.TransparentBlock;
 import net.minecraft.entity.Entity;
